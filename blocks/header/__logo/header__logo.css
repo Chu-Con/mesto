@@ -1,15 +1,9 @@
 .header__logo {
-  /*position: absolute;*/
   display: flex;
   width: 142px;
   height: 33px;
   margin: 45px auto 0 27px; 
-  /* шрифт для альтернативного описания, если картинка не отобразится */
-  font-family: 'Inter', 'Arial', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  /* margin: 45px auto 0 0;  */
 }
   
 /* 320 */
@@ -18,5 +12,6 @@
     width: 103.74px;
     height: 24.4px;
     margin: 28px auto 0 27px; 
+    /* margin: 28px auto 0 0;  */
   }
 }

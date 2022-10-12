@@ -1,0 +1,26 @@
+.info {
+  display: grid;
+  grid-template-areas:
+  'nm ebtn'
+  'ocptn .';
+  /* grid-template-areas:
+  'nm'
+  'ocptn'; */
+  width: 336px;
+  /* height: 73px; ЖЕСТКИЙ ПАРАМЕТР ВЫСОТЫ */
+  margin: calc(62px - 40px) 0 0 30px;
+  padding: 0;
+  align-items: baseline;
+  grid-area: info;
+}
+  
+/* 320 */
+@media (max-width: 767px){
+  .info {
+    width: 282px;
+    /* height: 54px; ЖЕСТКИЙ ПАРАМЕТР ВЫСОТЫ */
+    text-align: center;
+    margin: 26px auto 0;
+    grid-template-columns: auto min-content;
+  }
+}

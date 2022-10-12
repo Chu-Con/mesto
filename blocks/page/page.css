@@ -15,17 +15,19 @@
   /* 768 */
 /*@media (max-width: 1023px){
   .page {
-
+    max-width: 1023px;
   }
 }*/
   
+
   /* 1024 */
-@media (max-width: 1279px){
+/* @media (max-width: 1279px){
   .page {
     max-width: 1279px;
   }
-}
+} */
   
+
 /* 1280 */
 @media (min-width: 1280px){
   .page {

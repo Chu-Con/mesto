@@ -1,0 +1,17 @@
+.avatar {
+  width: 120px;
+  /* height: 120px; */
+  margin: 0 0 0 27px;
+  /* margin: 0; */
+  padding: 0;
+  grid-area: avatar;
+  z-index: 1;
+}
+
+
+/* 320 */
+@media (max-width: 767px){
+  .avatar {
+    margin: 0 auto;
+  }
+}
