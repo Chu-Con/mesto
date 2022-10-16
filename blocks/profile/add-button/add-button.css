@@ -23,8 +23,8 @@
 
   width: 150px;
   height: 50px; /*ЖЕСТКИЙ ПАРАМЕТР ВЫСОТЫ */
-  margin: calc(75px - 40px) 27px 0 auto;
-  /* margin: calc(75px - 40px) 0 0 auto; */
+  /* margin: calc(75px - 40px) 27px 0 auto; */
+  margin: 35px 0 35px auto;
   box-sizing: border-box;
   padding: 0;
   grid-area: add-button;
@@ -39,3 +39,25 @@
     margin: 36px auto;
   }
 }
+
+/* 768 */
+@media (max-width: 1023px){
+  .add-button {
+    /* margin: calc(75px - 40px) 27px 0 auto; */
+    margin: 36px auto;
+  }
+}
+
+/* 1024 */
+/* @media (max-width: 1279px){
+  .add-button {
+    margin: calc(75px - 40px) 0 0 auto;
+  }
+} */
+
+/* 1280 */
+/* @media (min-width: 1280px){
+  .add-button {
+    margin: calc(75px - 40px) 0 0 auto;
+  }
+} */

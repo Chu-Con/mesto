@@ -1,0 +1,8 @@
+.post {
+  /* display: flex ; */
+  height: 361px;
+  width: 282px;
+  background-color: #FFF;
+  border-radius: 10px;
+  /* border: 1px solid #000; */
+}

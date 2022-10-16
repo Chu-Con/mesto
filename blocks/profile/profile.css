@@ -16,6 +16,13 @@
     'info' 
     'add-button';
     grid-template-columns: auto;
-    /* margin: auto; */
+    margin: 42px auto 0;
   }
 }
+
+/* 768 */
+/* @media (max-width: 1023px){
+  .profile  {
+    margin: 40px auto 51px;
+  }
+} */

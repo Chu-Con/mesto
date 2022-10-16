@@ -15,7 +15,13 @@
 @import url(../blocks/profile/info/__edit-button/info__edit-button.css);
 @import url(../blocks/profile/add-button/add-button.css);
 
+@import url(../blocks/gallery/gallery.css);
+@import url(../blocks/post/post.css);
+@import url(../blocks/post/__photo/post__photo.css);
+@import url(../blocks/post/__description/post__description.css);
+@import url(../blocks/post/__name/post__name.css);
+@import url(../blocks/post/__like-button/post__like-button.css);
 
-
-
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__copyright/footer__copyright.css);
 
