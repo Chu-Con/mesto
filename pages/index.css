@@ -25,3 +25,185 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 
+
+.popup {
+  font-family: 'Inter';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #000;
+  opacity: 0.5; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  /* ПОКАЗАТЬ - СКРЫТЬ ПОПАП */
+}
+
+.popup__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: flex-start; */
+  /* align-content: center; */
+  width: 430px;
+  height: 330px;
+  /* width: 100%; */
+  background: #FFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* 320 */
+@media (max-width: 767px){
+  .popup__container {
+    width: 282px;
+    height: 322px;
+  }
+}
+
+
+.popup_opened {
+  /* display: flex; */
+}
+
+.popup__name {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000;
+  padding: 0;
+  margin: 34px auto 0 36px;
+}
+
+/* 320 */
+@media (max-width: 767px){
+  .popup__name {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 25px auto 0;    
+  }
+}
+
+
+.popup__close-btn {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 32px;
+  height: 32px;
+  /* background-image: url(../../../../images/close-button.png); */
+  /* background-image: url(../images/close-button.png); */
+  background: none;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+/* 320 */
+@media (max-width: 767px){
+  .popup__close-btn {
+    top: -30px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.popup__close-btn:hover {
+  opacity: .6;
+}
+
+.popup__text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid #000000;
+  /* opacity: 0.2; */
+  margin: 0;
+  padding: 0 0 13px 0;
+}
+
+.popup__text_type_name {
+  margin: 54px 36px 0;
+}
+
+.popup__text_type_occupation {
+  margin: 30px 36px 0;
+}
+
+.form__save-btn {
+  width: 358px;
+  height: 50px;
+  margin: 48px 0 0 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFF;
+  background: #000;
+  border-radius: 2px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  transition: opacity 0.11s ease;
+  /* transition здесь, а не в hover для плавного эффекта не только при наведении, но и когда убираем курсор с элемента */
+}
+
+/* 320 */
+@media (max-width: 767px){
+  .form__save-btn {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+/* 768 */
+/* @media (max-width: 1023px){
+  .form__save-btn {
+
+  }
+} */
+
+/* 1024 */
+/* @media (max-width: 1279px){
+  .form__save-btn {
+
+  }
+} */
+
+/* 1280 */
+/* @media (min-width: 1280px){
+  .form__save-btn {
+
+  }
+} */
+
+.form__save-btn:hover {
+  opacity: .8;
+/* transition: opacity 0.15s ease; */
+}
+
+.form__save-btn_action_add {
+  /* переназвать селектор form__save-btn_action_add */
+  /* background: none;
+  border: none;
+  box-shadow: none; */
+}

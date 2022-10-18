@@ -1,5 +1,5 @@
 .post__description {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  /* align-items: center; */
 }

@@ -32,9 +32,9 @@
             <p class="info__occupation">
               Исследователь океана
             </p>
-            <div class="info__edit-button info__open-popup">
+            <button class="info__edit-button info__open-popup">
               <!-- <img src="./images/edit-button.png" alt="Кнопка редактировать профиль"> -->
-            </div>
+            </button>
           </div>
           <button class="add-button">
             <!-- <img src="./images/add-btn-plus.png" alt="Кнопка добавить новое фото"> -->
@@ -49,7 +49,7 @@
                 Карачаевск
               </h2>
               <div class="post__like-button">
-
+                <!-- <img src="./images/like-button.png" alt="Кнопка нравится"> -->
               </div>
             </div>
           </article>
@@ -121,12 +121,15 @@
         </p>
       </footer>
 
-      <section class="popup">
-        <div class="popup__container popup_opened">
+      <section class="popup popup_opened">
+        <div class="popup__container ">
           <h3 class="popup__name">
             Редактировать профиль
           </h3>
-          <img class="popup__close" src="./images/close-button.png" alt="Кнопка закрыть">
+          <!-- <button class="popup__close-btn">
+            <img src="./images/close-button.png" alt="Кнопка закрыть">
+          </button> -->
+          <img class="popup__close-btn" src="./images/close-button.png" alt="Кнопка закрыть">
           <!-- <div class="input"></div> -->
             <input type="text" placeholder="Имя" class="popup__text popup__text_type_name">
             <input type="text" placeholder="О себе" class="popup__text popup__text_type_occupation">
@@ -134,7 +137,7 @@
               <!-- переназвать модификатор form__save-btn_action_add -->
               Сохранить
             </button>
-        </div>
+        </div> 
       </section>
 
     </div>
