@@ -1,0 +1,63 @@
+.popup__save-btn {
+  width: 358px;
+  height: 50px;
+  margin: 48px 0 0 0;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFF;
+  background: #000;
+  border-radius: 2px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  transition: opacity 0.11s ease;
+  /* transition здесь, а не в hover для плавного эффекта не только при наведении, но и когда убираем курсор с элемента */
+}
+
+/* 320 */
+@media (max-width: 767px){
+  .popup__save-btn {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+/* 768 */
+/* @media (max-width: 1023px){
+  .popup__save-btn {
+
+  }
+} */
+
+/* 1024 */
+/* @media (max-width: 1279px){
+  .popup__save-btn {
+
+  }
+} */
+
+/* 1280 */
+/* @media (min-width: 1280px){
+  .popup__save-btn {
+
+  }
+} */
+
+.popup__save-btn:hover {
+  opacity: .8;
+/* transition: opacity 0.15s ease; */
+}
+
+.popup__save-btn_action_add {
+  /* переназвать селектор popup__save-btn_action_add */
+  /* background: none;
+  border: none;
+  box-shadow: none; */
+}
