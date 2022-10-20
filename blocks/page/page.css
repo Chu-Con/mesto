@@ -5,33 +5,3 @@
   background-color: #000; 
   color: #FFF;
 }
-
-/* 320 */
-/* @media (max-width: 767px){
-  .page {
-    min-width: 320px;
-  }
-} */
-  
-  /* 768 */
-/*@media (max-width: 1023px){
-  .page {
-    max-width: 1023px;
-  }
-}*/
-  
-
-  /* 1024 */
-/* @media (max-width: 1279px){
-  .page {
-    max-width: 1279px;
-  }
-} */
-  
-
-/* 1280 */
-/* @media (min-width: 1280px){
-  .page {
-    min-width: 1280px;
-  }
-} */

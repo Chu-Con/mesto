@@ -29,27 +29,6 @@
   }
 }
 
-/* 768 */
-/* @media (max-width: 1023px){
-  .popup__save-btn {
-
-  }
-} */
-
-/* 1024 */
-/* @media (max-width: 1279px){
-  .popup__save-btn {
-
-  }
-} */
-
-/* 1280 */
-/* @media (min-width: 1280px){
-  .popup__save-btn {
-
-  }
-} */
-
 .popup__save-btn:hover {
   opacity: .8;
 }

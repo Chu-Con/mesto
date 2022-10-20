@@ -6,4 +6,12 @@
   line-height: 22px;
   color: #545454;
   margin: 0 auto;
+}
+
+  /* 320 */
+@media (max-width: 767px){
+  .footer__copyright {
+    font-size: 14px;
+    line-height: 17px;
   }
+}

@@ -1,20 +1,13 @@
 .info {
   display: grid;
-  /* display: flex;
-  flex-direction: column; */
-  /* text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden; */
   grid-template-areas:
   'nm ebtn'
   'ocptn .';
   grid-template-columns: min-content min-content;
-  /* width: 336px; */
   max-width: 480px;
   margin: calc(62px - 40px) 0 0 30px;
   padding: 0;
   align-items: baseline;
-  /* align-items: center; */
   justify-content: flex-start;
   grid-area: info;
 }
@@ -26,6 +19,5 @@
     text-align: center;
     margin: 26px auto 0;
     justify-content: center;
-    /* grid-template-columns: auto min-content; */
   }
 }

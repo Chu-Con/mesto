@@ -1,13 +1,8 @@
 .header__line {
   display: flex;
-  /* width: calc(880px - 27px * 2);  */
-  /* max-width: 880px; */
   width: 100%;
-  /* width: calc(100% - 1em); */
   height: 1px; 
-  /* background-color: red; */
   background-color: #545;
-  /* margin: 41px 27px 0;  */
   margin: 41px 0 0;
   opacity: 0.7;
 }
@@ -15,9 +10,6 @@
 /* 320 */
 @media (max-width: 767px){
   .header__line {
-    /* min-width: 320px; */
-    /* margin: 31.6px auto 0;  */
     margin: 31.6px 0 0; 
-    /* width: 100%; */
   }
 }
