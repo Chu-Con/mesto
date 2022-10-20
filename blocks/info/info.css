@@ -9,13 +9,14 @@
   'nm ebtn'
   'ocptn .';
   grid-template-columns: min-content min-content;
-  width: 336px;
+  /* width: 336px; */
+  max-width: 480px;
   margin: calc(62px - 40px) 0 0 30px;
   padding: 0;
-  /* align-items: baseline; */
-  align-items: center;
+  align-items: baseline;
+  /* align-items: center; */
+  justify-content: flex-start;
   grid-area: info;
-  justify-content: center;
 }
   
 /* 320 */
@@ -24,6 +25,7 @@
     width: 282px;
     text-align: center;
     margin: 26px auto 0;
+    justify-content: center;
     /* grid-template-columns: auto min-content; */
   }
 }

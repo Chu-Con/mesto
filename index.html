@@ -15,29 +15,19 @@
       <header class="header">
         <img class="header__logo" src="./images/logo.svg" alt="Логотип Mesto Russia">
         <div class="header__line">
-
         </div>
       </header>
 
       <main>
         <section class="profile">
-          <!-- <div class="avatar">
-            <img src="./images/avatar.png" alt="Аватар пользователя">
-          </div> -->
           <img class="avatar" src="./images/avatar.png" alt="Аватар пользователя">
           <div class="info">
-            <h1 class="info__name">
-              Жак-Ив Кусто
-            </h1>
-            <p class="info__occupation">
-              Исследователь океана
-            </p>
+            <h1 class="info__name">Жак-Ив Кусто</h1>
+            <p class="info__occupation">Исследователь океана</p>
             <button class="info__edit-button info__open-popup">
-              <!-- <img src="./images/edit-button.png" alt="Кнопка редактировать профиль"> -->
             </button>
           </div>
           <button class="add-button">
-            <!-- <img src="./images/add-btn-plus.png" alt="Кнопка добавить новое фото"> -->
           </button>
         </section>
 
@@ -115,31 +105,27 @@
           </article>
         </section>
       </main>
+
       <footer class="footer">
         <p class="footer__copyright">
           © 2020 Mesto Russia
         </p>
       </footer>
 
-      <section class="popup popup_opened">
-        <div class="popup__container ">
+      <section class="popup">
+        <div class="popup__container">
           <h3 class="popup__name">
             Редактировать профиль
           </h3>
-          <!-- <button class="popup__close-btn">
-            <img src="./images/close-button.png" alt="Кнопка закрыть">
-          </button> -->
           <img class="popup__close-btn" src="./images/close-button.png" alt="Кнопка закрыть">
-          <!-- <div class="input"></div> -->
-            <input type="text" placeholder="Имя" class="popup__text popup__text_type_name">
-            <input type="text" placeholder="О себе" class="popup__text popup__text_type_occupation">
-            <button class="popup__save-btn popup__save-btn_action_add">
-              <!-- переназвать модификатор popup__save-btn_action_add -->
-              Сохранить
-            </button>
+          <input type="text" placeholder="Имя" class="popup__text popup__text_type_name">
+          <input type="text" placeholder="О себе" class="popup__text popup__text_type_occupation">
+          <button type="submit" class="popup__save-btn">
+            Сохранить
+          </button>
         </div> 
       </section>
-
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -1,5 +1,7 @@
 .info__occupation {
-  font-family: 'Inter';
+  /* max-width: 300px; */
+  max-width: 360px;
+  font-family: 'Inter', 'Arial', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -15,7 +17,8 @@
 /* 320 */
 @media (max-width: 767px){
   .info__occupation {
-    font-family: 'Inter';
+    max-width: 230px;
+    font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
