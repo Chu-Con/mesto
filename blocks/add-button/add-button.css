@@ -14,7 +14,7 @@
   linear-gradient(#fff,#fff),
   #000;
   background-position: center;
-  background-size: 16% 2px, 2px 50%; 
+  background-size: 16% 2px, 2px 50%;
   background-repeat: no-repeat;
 
   /* border */
@@ -36,7 +36,7 @@
 @media (max-width: 767px){
   .add-button {
     width: 282px;
-    background-size: 9% 2px, 2px 50%; 
+    background-size: 9% 2px, 2px 50%;
     margin: 36px auto;
   }
 }
