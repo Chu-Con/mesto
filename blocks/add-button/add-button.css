@@ -1,8 +1,4 @@
 .add-button {
-  /* background-image: url(../images/add-btn-plus.png) no-repeat;
-  background-size: auto; */
-  background: none;
-  border: none;
   box-shadow: none;
   cursor: pointer;
 
@@ -23,7 +19,6 @@
   align-items: center;
   border: 2px solid #FFFFFF;
   border-radius: 2px;
-  background-color: transparent;
 
   width: 150px;
   height: 50px;
