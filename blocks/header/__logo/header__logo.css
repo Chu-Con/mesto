@@ -10,7 +10,7 @@
   .header__logo {
     width: 103.74px;
     height: 24.4px;
-    margin: 28px auto 0 27px; 
+    margin: 28px auto 0 27px;
   }
 }
 
@@ -24,6 +24,6 @@
 /* 1024 */
 @media (min-width: 1024px){
   .header__logo {
-    margin: 45px auto 0 0; 
+    margin: 45px auto 0 0;
   }
 }
