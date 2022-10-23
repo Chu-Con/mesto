@@ -1,0 +1,10 @@
+.input__name {
+  margin: 0px 36px 0;
+}
+
+
+@media (max-width: 767px){
+  .input__name {
+    margin: 0px 22px 0;
+  }
+}

@@ -2,12 +2,19 @@
   display: grid;
   grid-template-areas:
   'avatar info add-button';
-  grid-template-columns: min-content auto min-content;
+  /* grid-template-columns: min-content auto min-content; */
+  grid-template-columns: min-content auto auto;
   margin: 40px auto 51px;
   max-width: 880px;
 }
-  
-/* 320 */
+
+
+@media (max-width: 1023px){
+  .profile {
+    grid-template-columns: min-content 1fr 1fr;
+  }
+}
+
 @media (max-width: 767px){
   .profile {
     grid-template-areas:

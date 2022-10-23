@@ -1,0 +1,30 @@
+.profile__occupation {
+  max-width: 360px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 0 15px 0;
+  /* margin-bottom изменил по PerfectPixel */
+  padding: 0;
+  grid-area: ocptn;
+}
+
+
+@media (max-width: 767px){
+  .profile__occupation {
+    max-width: 230px;
+    font-size: 14px;
+    line-height: 16.94px;
+    text-align: center;
+    margin: 10px auto 0;
+    padding: 0 0 0 30px;
+    /* margin: 14px auto 0;
+    padding: 0; */
+    /* margin и padding изменил по PerfectPixel */
+  }
+}

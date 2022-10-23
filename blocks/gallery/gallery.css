@@ -1,9 +1,27 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, 282px);
-  gap: 20px 17px;
+  /* gap: 20px 17px; */
+  gap: 14px 17px;
+  /* изменил row-gap в соответствии с PerfectPixel */
   max-width: 880px;
   padding: 0;
   margin: 0 auto;
   justify-content: center;
+}
+
+
+@media (max-width: 1023px){
+  .gallery {
+    padding: 0 17px; 
+    grid-template-columns: repeat(auto-fit, minmax(282px, auto));
+  }
+}
+
+@media (max-width: 767px){
+  .gallery {
+    padding: 0 19px;
+    row-gap: 13px;
+    /* изменил row-gap в соответствии с PerfectPixel */
+  }
 }

@@ -1,0 +1,38 @@
+.input__save-btn {
+  width: 358px;
+  height: 50px;
+  padding: 0;
+  margin: 52px auto 42px auto;
+  /* изменил padding-bottom в соответствии с PerfectPixel */
+  /* margin: 48px 0 37px 0; */
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFF;
+  background: #000;
+  border-radius: 2px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+  transition: opacity 0.11s ease;
+  /* transition здесь, а не в hover для плавного эффекта не только при наведении, но и когда убираем курсор с элемента */
+}
+
+
+@media (max-width: 767px){
+  .input__save-btn {
+    width: 238px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 45px 0 25px 0;
+  }
+}
+
+.input__save-btn:hover {
+  opacity: .8;
+}

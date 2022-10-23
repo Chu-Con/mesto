@@ -1,0 +1,24 @@
+.profile__avatar {
+  font-family: 'Inter', 'Arial', sans-serif;
+  width: 120px;
+  height: 120px;
+  padding: 0;
+  margin: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+  grid-area: avatar;
+}
+
+
+@media (max-width: 1023px){
+  .profile__avatar {
+    margin: 0 0 0 27px;
+  }
+}
+
+@media (max-width: 767px){
+  .profile__avatar {
+    margin: 0 auto;
+  }
+}

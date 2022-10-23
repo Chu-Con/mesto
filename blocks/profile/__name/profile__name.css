@@ -1,0 +1,28 @@
+.profile__name {  
+  max-width: 360px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0;
+  padding: 0 18px 0 0;
+  grid-area: nm;
+}
+  
+
+@media (max-width: 767px){
+  .profile__name {
+    max-width: 230px;
+    font-size: 27px;
+    line-height: 32.68px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 0 0 29px;
+    /* padding: 0 10px 0 0; */
+    /* padding зменил по PerfectPixel */
+  }
+}

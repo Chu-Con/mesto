@@ -1,0 +1,26 @@
+.profile__info {
+  display: grid;
+  grid-template-areas:
+  'nm ebtn'
+  'ocptn .';
+  grid-template-columns: min-content min-content;
+  max-width: 480px;
+  margin: 22px 0 0 30px;
+  padding: 0;
+  align-items: baseline;
+  justify-content: flex-start;
+  grid-area: info;
+}
+  
+
+@media (max-width: 767px){
+  .profile__info {
+    min-width: 282px;
+    grid-template-columns: min-content min(30px);
+    text-align: center;
+    /* margin: 26px auto 0; */
+    /* margin и padding изменил по PerfectPixel */
+    margin: 24px auto 0;
+    justify-content: center;
+  }
+}

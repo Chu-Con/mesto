@@ -1,5 +1,5 @@
 .post {
-  height: 361px;
+  min-height: 361px;
   width: 282px;
   background-color: #FFF;
   border-radius: 10px;

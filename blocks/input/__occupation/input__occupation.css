@@ -1,0 +1,10 @@
+.input__occupation {
+  margin: 30px 36px 0;
+}
+
+
+@media (max-width: 767px){
+  .input__occupation {
+    margin: 30px 22px 0;
+  }
+}

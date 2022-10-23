@@ -5,30 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Константин Чуприн">
     <link rel="stylesheet" href="./pages/index.css">
-    <title>
-      Место
-    </title>
+    <title>Место</title>
   </head>
 
   <body>
     <div class="page">
       <header class="header">
         <img class="header__logo" src="./images/logo.svg" alt="Логотип Mesto Russia">
-        <div class="header__line">
-        </div>
       </header>
 
       <main>
         <section class="profile">
-          <img class="avatar" src="./images/avatar.png" alt="Аватар пользователя">
-          <div class="info">
-            <h1 class="info__name">Жак-Ив Кусто</h1>
-            <p class="info__occupation">Исследователь океана</p>
-            <button class="info__edit-button info__open-popup">
+          <img class="profile__avatar" src="./images/avatar.svg" alt="Аватар пользователя">
+          <div class="profile__info">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <p class="profile__occupation">Исследователь океана</p>
+            <button class="profile__edit-button" type="button" name="edit-user-info">
             </button>
+            <!-- <button class="profile__edit-button profile__open-popup" type="button" name="edit-user-info">
+            </button> -->
           </div>
-          <button class="add-button">
-
+          <button class="profile__add-button" type="button" name="add-post">
           </button>
         </section>
 
@@ -36,97 +33,80 @@
           <article class="post">
             <img class="post__photo" src="./images/kirill-pershin-karachaevo.jpg" alt="Старый каменный храм">
             <div class="post__description">
-              <h2 class="post__name">
-                Карачаевск
-              </h2>
-              <div class="post__like-button">
-
-              </div>
+              <h2 class="post__name">Карачаевск</h2>
+              <button class="post__like-button" type="button" name="like-post">
+              </button>
             </div>
           </article>
 
           <article class="post">
             <img class="post__photo" src="./images/kirill-pershin-elbrus.jpg" alt="Гора Эльбрус вдали">
             <div class="post__description">
-              <h2 class="post__name">
-                Гора Эльбрус
-              </h2>
-              <div class="post__like-button">
-
-              </div>
+              <h2 class="post__name">Гора Эльбрус</h2>
+              <button class="post__like-button" type="button" name="like-post">
+              </button>
             </div>
           </article>
 
           <article class="post">
             <img class="post__photo" src="./images/kirill-pershin-dombai.jpg" alt="Горы Домбая">
             <div class="post__description">
-              <h2 class="post__name">
-                Домбай
-              </h2>
-              <div class="post__like-button">
-
-              </div>
+              <h2 class="post__name">Домбай</h2>
+              <button class="post__like-button" type="button" name="like-post">
+              </button>
             </div>
           </article>
 
           <article class="post">
             <img class="post__photo" src="./images/kirill-pershin-elbrus.jpg" alt="Гора Эльбрус вдали">
             <div class="post__description">
-              <h2 class="post__name">
-                Гора Эльбрус
-              </h2>
-              <div class="post__like-button">
-
-              </div>
+              <h2 class="post__name">Гора Эльбрус</h2>
+              <button class="post__like-button" type="button" name="like-post">
+              </button>
             </div>
           </article>
 
           <article class="post">
             <img class="post__photo" src="./images/kirill-pershin-dombai.jpg" alt="Горы Домбая">
             <div class="post__description">
-              <h2 class="post__name">
-                Домбай
-              </h2>
-              <div class="post__like-button">
-
-              </div>
+              <h2 class="post__name">Домбай</h2>
+              <button class="post__like-button" type="button" name="like-post">
+              </button>
             </div>
           </article>
 
           <article class="post">
             <img class="post__photo" src="./images/kirill-pershin-karachaevo.jpg" alt="Старый каменный храм">
             <div class="post__description">
-              <h2 class="post__name">
-                Карачаево-Черкессия
-              </h2>
-              <div class="post__like-button">
-
-              </div>
+              <h2 class="post__name">Карачаево-Черкессия</h2>
+              <button class="post__like-button" type="button" name="like-post">
+              </button>
             </div>
           </article>
         </section>
       </main>
 
       <footer class="footer">
-        <p class="footer__copyright">
-          © 2020 Mesto Russia
-        </p>
+        <p class="footer__copyright">© 2020 Mesto Russia</p>
       </footer>
 
-      <section class="popup">
+      <div class="popup">
         <div class="popup__container">
-          <h3 class="popup__name">
+          <h3 class="popup__title">
             Редактировать профиль
           </h3>
-          <img class="popup__close-btn" src="./images/close-button.png" alt="Кнопка закрыть">
-          <input type="text" placeholder="Имя" class="popup__text popup__text_type_name">
-          <input type="text" placeholder="О себе" class="popup__text popup__text_type_occupation">
-          <button type="submit" class="popup__save-btn">
-            Сохранить
+          <button class="popup__close-btn" type="button" name="close">
           </button>
+          <form class="input" name="form">
+            <input class="input__text input__name" type="text" name="user-name" placeholder="Имя">
+            <input class="input__text input__occupation" type="text" name="about-user" placeholder="О себе">
+            <button class="input__save-btn" type="submit" name="save-user-info">
+              Сохранить
+            </button>
+          </form>
         </div> 
-      </section>
+      </div>
     </div>
-    <script src="./index.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
