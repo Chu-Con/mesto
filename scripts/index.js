@@ -14,7 +14,7 @@ let popupUserAbout = popup.querySelector('.input__occupation');
 const popupOpenEvent = function () {
   popup.classList.add('popup_opened');
   // вставить данные при открытии
-  popupUserName.value = userName.textContent; 
+  popupUserName.value = userName.textContent;
   popupUserAbout.value = userAbout.textContent;
 };
 
