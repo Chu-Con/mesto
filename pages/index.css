@@ -31,6 +31,6 @@
 @import url(../blocks/popup/__close-btn/popup__close-btn.css);
 @import url(../blocks/input/input.css);
 @import url(../blocks/input/__text/input__text.css);
-@import url(../blocks/input/__name/input__name.css);
-@import url(../blocks/input/__occupation/input__occupation.css);
+@import url(../blocks/input/__text/_type/_name/input__text_type_name.css);
+@import url(../blocks/input/__text/_type/_occupation/input__text_type_occupation.css);
 @import url(../blocks/input/__save-btn/input__save-btn.css);

@@ -6,8 +6,8 @@ let userName = document.querySelector('.profile__name');
 let userAbout = document.querySelector('.profile__occupation');
 
 let form = popup.querySelector('.input');
-let popupUserName = popup.querySelector('.input__name');
-let popupUserAbout = popup.querySelector('.input__occupation');
+let popupUserName = popup.querySelector('.input__text_type_name');
+let popupUserAbout = popup.querySelector('.input__text_type_occupation');
 
 
 // открыть попап
