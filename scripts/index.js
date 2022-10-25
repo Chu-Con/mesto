@@ -36,9 +36,7 @@ function editUserInfo (evt) {
   userName.textContent = popupUserName.value;
   userAbout.textContent = popupUserAbout.value;
 
-  popup.classList.remove('popup_opened');
-  // или вызов функции
-  // popupCloseEvent();
+  popupCloseEvent();
 };
 
 // слушатель нужно навешивать на тег form
