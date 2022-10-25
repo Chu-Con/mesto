@@ -21,9 +21,6 @@ const popupOpenEvent = function () {
 // закрыть попап
 const popupCloseEvent = function () {
   popup.classList.remove('popup_opened');
-  // при нажатии на крестик не сохранять введенные значения
-  popupUserName.value = '';
-  popupUserAbout.value = '';
 };
 
 // слушатели событий - по клику на кнопку редактировать или крестик
