@@ -3,10 +3,11 @@
   box-sizing: border-box;
   width: 24px;
   height: 24px;
-  background-image: url(../../../images/edit-button.svg);
-  background-size: 24px 24px;
+  border: 1px solid #FFFFFF;
+  background-image: url(../../../images/pen-for-edit-button.svg);
+  background-size: 10px 10px;
   background-repeat: no-repeat;
-  border: none;
+  background-position: center;
   box-shadow: none;
   cursor: pointer;
   grid-area: ebtn;
@@ -17,7 +18,7 @@
   .profile__edit-button {
     width: 18px;
     height: 18px;
-    background-size: 18px 18px;
+    background-size: 7.5px 7.5px;
     /* margin изменил по PerfectPixel */
     /* при переполнении съезжает к правой границе области */
     /* margin: 0 0 0 11px; */
