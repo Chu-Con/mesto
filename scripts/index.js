@@ -53,6 +53,7 @@ const createCardNode = (name, link) => {
 
 render();
 
+//РЕДАКТИРОВАТЬ ПРОФИЛЬ////////////////////////////////////////////////////
 
 
 const buttonOpenPopup = document.querySelector('.profile__edit-button');
@@ -66,8 +67,9 @@ let form = popup.querySelector('.input');
 let popupUserName = popup.querySelector('.input__text_type_name');
 let popupUserAbout = popup.querySelector('.input__text_type_occupation');
 
+
 // подумать над названием функций openPopupEvent и closePopupEvent
-// открыть попап
+// открыть попап РЕДАКТИРОВАТЬ ПРОФИЛЬ
 const eventOpenPopup = function () {
   popup.classList.add('popup_opened');
   // вставить данные при открытии
@@ -75,7 +77,7 @@ const eventOpenPopup = function () {
   popupUserAbout.value = userAbout.textContent;
 };
 
-// закрыть попап
+// закрыть попап 
 const eventClosePopup = function () {
   popup.classList.remove('popup_opened');
 };
@@ -93,5 +95,68 @@ function editUserInfo (evt) {
   eventClosePopup();
 };
 
-// слушатель нужно навешивать на тег form
 form.addEventListener('submit', editUserInfo);
+
+
+//НОВОЕ МЕСТО/////////////////////////////////////////////////////////////////
+
+// const btnAddPost= document.querySelector('.profile__add-button');
+// const placePopup = document.querySelector('.place-popup');
+// const btnExitAddPost = placePopup.querySelector('.popup__close-btn');
+
+// let placeName = document.querySelector('.post__name');
+
+// // let form = popup.querySelector('.input');
+// let inputPlaceName = placePopup.querySelector('.input__text_type_place');
+// let inputPlaceLink = placePopup.querySelector('.input__text_type_link');
+
+// // открыть попап НОВОЕ МЕСТО
+// const evtOpenPopup = function () {
+//   placePopup.classList.add('popup_opened');
+// };
+
+// // закрыть попап 
+// const evtClosePopup = function () {
+//   placePopup.classList.remove('popup_opened');
+// };
+
+// // слушатели событий - по клику на кнопку добавить или крестик
+// btnAddPost.addEventListener('click', evtOpenPopup);
+// btnExitAddPost.addEventListener('click', evtClosePopup);
+
+
+const btnAddPost= document.querySelector('.profile__add-button');
+const placePopup = document.querySelector('.place-popup');
+const btnExitAddPost = placePopup.querySelector('.popup__close-btn');
+
+let placeName = document.querySelector('.post__name');
+let placeImage = document.querySelector('.post__photo');
+
+
+let inputPlaceName = placePopup.querySelector('.input__text_type_place');
+let inputPlaceLink = placePopup.querySelector('.input__text_type_link');
+
+// открыть попап
+const evtOpenPopup = function () {
+  placePopup.classList.add('popup_opened');
+};
+
+// закрыть попап 
+const evtClosePopup = function () {
+  placePopup.classList.remove('popup_opened');
+};
+
+// слушатели событий - по клику на кнопку добавить или крестик
+btnAddPost.addEventListener('click', evtOpenPopup);
+btnExitAddPost.addEventListener('click', evtClosePopup);
+
+// добавить новую карточку
+// function addNewPost (evt) {
+//   evt.preventDefault();
+//   placeName.textContent = inputPlaceName.value;
+//   userAbout.src = inputPlaceLink.value;
+
+//   evtClosePopup();
+// };
+
+// form.addEventListener('submit', addNewPost);
