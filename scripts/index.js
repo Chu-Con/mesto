@@ -42,10 +42,17 @@ const createCardNode = (name, link) => {
   postElement.querySelector('.post__name').textContent = name;
   postElement.querySelector('.post__photo').src = link;
 
+  // ставить лайк
+  const postLike = postElement.querySelector('.post__like-button');
+  postLike.addEventListener('click', function (evt) {
+    evt.target.classList.toggle('post__like-button_active');
+  });
+
   return postElement;
 }
 
 render();
+
 
 
 const buttonOpenPopup = document.querySelector('.profile__edit-button');
