@@ -25,6 +25,29 @@ const initialCards = [
   }
 ];
 
+// добавить карточки "из коробки" при загрузке страницы 
+const container = document.querySelector('.gallery');
+const postTemplate = document.querySelector('#post-template');
+
+const render = () => {
+  initialCards.forEach(Card =>{
+    const postElement = createCardNode(Card.name, Card.link);
+    container.append(postElement);
+  })
+}
+
+const createCardNode = (name, link) => {
+  const postElement = postTemplate.content.cloneNode(true);
+
+  postElement.querySelector('.post__name').textContent = name;
+  postElement.querySelector('.post__photo').src = link;
+
+  return postElement;
+}
+
+render();
+
+
 const buttonOpenPopup = document.querySelector('.profile__edit-button');
 const popup = document.querySelector('.popup');
 const buttonClosePopup = popup.querySelector('.popup__close-btn');
@@ -36,7 +59,7 @@ let form = popup.querySelector('.input');
 let popupUserName = popup.querySelector('.input__text_type_name');
 let popupUserAbout = popup.querySelector('.input__text_type_occupation');
 
-
+// подумать над названием функций openPopupEvent и closePopupEvent
 // открыть попап
 const eventOpenPopup = function () {
   popup.classList.add('popup_opened');
