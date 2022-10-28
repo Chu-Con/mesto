@@ -1,4 +1,7 @@
 .post {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 361px;
   width: 282px;
   background-color: #FFF;
