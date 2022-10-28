@@ -20,8 +20,3 @@
 .post__like-button:hover {
   opacity: .5;
 }
-
-/* ВЫНЕСТИ В ОТДЕЛЬНУЮ ПАПКУ */
-.post__like-button_active {
-  background-image: url(../../../images/like-button-active.svg);
-}

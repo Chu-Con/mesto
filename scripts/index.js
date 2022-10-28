@@ -77,7 +77,7 @@ const render = () => {
     const postElement = createCardNode(card.name, card.link);
     container.append(postElement);
 
-    btnAddPost.addEventListener("click", evtOpenPopup);
+    btnAddPost.addEventListener('click', evtOpenPopup);
   })
 }
 
@@ -93,10 +93,21 @@ const createCardNode = (name, link) => {
     evt.target.classList.toggle('post__like-button_active');
   });
 
+  // кнопка удалить карточку
+  const deleteBtn = postElement.querySelector('.post__delete-button');
+  deleteBtn.addEventListener('click', deleteCard);
+
   return postElement;
-}
+};
+
+// событие удалить карточку
+const deleteCard = (evt) => {
+  const currentCard = evt.target.closest('.post');
+  currentCard.remove();
+};
 
 render();
+
 
 // НОВОЕ МЕСТО добавить новую карточку
 function addNewPost (evt) {
@@ -109,7 +120,6 @@ function addNewPost (evt) {
 };
 
 placeForm.addEventListener('submit', addNewPost);
-
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ////////////////////////////////////////////////////
 
