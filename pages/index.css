@@ -54,6 +54,11 @@
   display: flex;
 }
 
+.place-input {
+  display: flex;
+  flex-direction: column;
+}
+
 /* 
 .place-popup__container {
   position: relative;
