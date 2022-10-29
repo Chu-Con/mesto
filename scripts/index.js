@@ -55,6 +55,9 @@ const placeName = document.querySelector('.post__name');
 const placeImage = document.querySelector('.post__photo');
 
 
+const imagePopup = document.querySelector('.image-popup');
+const btnExitImage = imagePopup.querySelector('.popup__close-btn');
+
 
 // НОВОЕ МЕСТО открыть попап
 const evtOpenPopup = function () {
@@ -72,6 +75,7 @@ const evtClosePopup = function () {
 btnAddPost.addEventListener('click', evtOpenPopup);
 btnExitAddPost.addEventListener('click', evtClosePopup);
 
+// рендерим элементы массива
 const render = () => {
   initialCards.forEach(card =>{
     const postElement = createCardNode(card.name, card.link);
@@ -97,16 +101,33 @@ const createCardNode = (name, link) => {
   const deleteBtn = postElement.querySelector('.post__delete-button');
   deleteBtn.addEventListener('click', deleteCard);
 
+  // ПОПАП С КАРТИНКОЙ открыть
+  const evtOpenImage = function () {
+    imagePopup.classList.add('popup_opened');
+  };
+
+  const placeImage = postElement.querySelector('.post__photo');
+  placeImage.addEventListener('click', evtOpenImage);
+
+  // ПОПАП С КАРТИНКОЙ закрыть
+  const evtCloseImage = function () {
+    imagePopup.classList.remove('popup_opened');
+  };
+
+  btnExitImage.addEventListener('click', evtCloseImage);
+
+
   return postElement;
 };
 
-// событие удалить карточку
+// функция удалить карточку
 const deleteCard = (evt) => {
   const currentCard = evt.target.closest('.post');
   currentCard.remove();
 };
 
 render();
+
 
 
 // НОВОЕ МЕСТО добавить новую карточку
@@ -120,6 +141,10 @@ function addNewPost (evt) {
 };
 
 placeForm.addEventListener('submit', addNewPost);
+
+
+
+
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ////////////////////////////////////////////////////
 
@@ -150,3 +175,19 @@ function editUserInfo (evt) {
 };
 
 form.addEventListener('submit', editUserInfo);
+
+
+
+
+
+// ПОПАП С КАРТИНКОЙ
+//   postElement.querySelector('.post__photo').addEventListener('click', function(){
+//   console.log('Тронула меня!');
+// });
+
+// или 
+
+// const placeImage = postElement.querySelector('.post__photo');
+// placeImage.addEventListener('click', function(){
+// console.log('Тронула меня!');
+// });
