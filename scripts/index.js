@@ -54,7 +54,6 @@ const inputPlaceLink = placePopup.querySelector('.input__text_type_link');
 const placeName = document.querySelector('.post__name');
 const placeImage = document.querySelector('.post__photo');
 
-
 const imagePopup = document.querySelector('.image-popup');
 const btnExitImage = imagePopup.querySelector('.popup__close-btn');
 
@@ -102,8 +101,16 @@ const createCardNode = (name, link) => {
   deleteBtn.addEventListener('click', deleteCard);
 
   // ПОПАП С КАРТИНКОЙ открыть
-  const evtOpenImage = function () {
+  const evtOpenImage = function (evt) {
     imagePopup.classList.add('popup_opened');
+
+    const imgPopupImg = imagePopup.querySelector('.image-popup__image');
+    const imgPopupName = imagePopup.querySelector('.image-popup__title');
+
+    const currentImg = evt.target.closest('.post__photo');
+    const currentName = evt.target.closest('.post');
+    imgPopupImg.src = currentImg.src;
+    imgPopupName.textContent = currentName.textContent;
   };
 
   const placeImage = postElement.querySelector('.post__photo');
@@ -129,7 +136,6 @@ const deleteCard = (evt) => {
 render();
 
 
-
 // НОВОЕ МЕСТО добавить новую карточку
 function addNewPost (evt) {
   evt.preventDefault();
@@ -142,11 +148,6 @@ function addNewPost (evt) {
 
 placeForm.addEventListener('submit', addNewPost);
 
-
-
-
-
-// РЕДАКТИРОВАТЬ ПРОФИЛЬ////////////////////////////////////////////////////
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ открыть попап
 const eventOpenPopup = function () {
@@ -175,19 +176,3 @@ function editUserInfo (evt) {
 };
 
 form.addEventListener('submit', editUserInfo);
-
-
-
-
-
-// ПОПАП С КАРТИНКОЙ
-//   postElement.querySelector('.post__photo').addEventListener('click', function(){
-//   console.log('Тронула меня!');
-// });
-
-// или 
-
-// const placeImage = postElement.querySelector('.post__photo');
-// placeImage.addEventListener('click', function(){
-// console.log('Тронула меня!');
-// });
