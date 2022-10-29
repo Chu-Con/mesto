@@ -89,6 +89,7 @@ const createCardNode = (name, link) => {
 
   postElement.querySelector('.post__name').textContent = name;
   postElement.querySelector('.post__photo').src = link;
+  postElement.querySelector('.post__photo').alt = name;
 
   // ставить лайк
   const postLike = postElement.querySelector('.post__like-button');
@@ -110,6 +111,7 @@ const createCardNode = (name, link) => {
     const currentImg = evt.target.closest('.post__photo');
     const currentName = evt.target.closest('.post');
     imgPopupImg.src = currentImg.src;
+    imgPopupImg.alt = currentName.textContent;
     imgPopupName.textContent = currentName.textContent;
   };
 
