@@ -1,19 +1,21 @@
-.post__like-button {
-  width: 22px;
-  height: 19px;
-  background-image: url(../../../images/like-button-disabled.svg);
+.post__delete-btn {
+  width: 18px;
+  height: 19.3px;
+  background-image: url(../../../images/bin-button.svg);
   background-repeat: no-repeat;
-  margin: 25px 20px 30px;
-  padding: 0 22px 0 0;
+  margin: 0;
+  padding: 0;
   background-color: transparent;
   border: none;
   box-shadow: none;
   cursor: pointer;
-  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: opacity 0.15s ease;
   /* transition здесь, а не в hover для плавного эффекта не только при наведении, но и когда убираем курсор с элемента */
 }
 
-
-.post__like-button:hover {
-  opacity: .5;
+.post__delete-btn:hover {
+  opacity: .6;
 }

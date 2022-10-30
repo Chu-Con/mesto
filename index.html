@@ -20,15 +20,14 @@
           <div class="profile__info">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
             <p class="profile__occupation">Исследователь океана</p>
-            <button class="profile__edit-button" type="button" name="edit-user-info">
+            <button class="profile__edit-btn" type="button" name="edit-user-info">
             </button>
           </div>
-          <button class="profile__add-button" type="button" name="add-post">
+          <button class="profile__add-btn" type="button" name="add-post">
           </button>
         </section>
 
         <section class="gallery">
-          <!-- карточки берутся из template + js -->
         </section>
       </main>
 
@@ -36,10 +35,11 @@
         <p class="footer__copyright">© 2020 Mesto Russia</p>
       </footer>
 
+
       <template id="post-template">
         <article class="post">
           <img class="post__photo" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg" alt="фото места">
-          <button class="post__delete-button" type="button" name="delete-post"></button>
+          <button class="post__delete-btn" type="button" name="delete-post"></button>
           <div class="post__description">
             <h2 class="post__name">Название места</h2>
             <button class="post__like-button" type="button" name="like-post"></button>
@@ -47,12 +47,13 @@
         </article>
       </template>
 
-      <div class="popup">
+
+      <div class="popup popup-edit">
         <div class="popup__container">
           <h3 class="popup__title">Редактировать профиль</h3>
           <button class="popup__close-btn" type="button" name="close">
           </button>
-          <form class="input" name="form">
+          <form class="input input-edit" name="form">
             <input class="input__text input__text_type_name" type="text" name="user-name" placeholder="Имя">
             <input class="input__text input__text_type_occupation" type="text" name="about-user" placeholder="О себе">
             <button class="input__save-btn" type="submit" name="save-user-info">Сохранить</button>
@@ -60,12 +61,12 @@
         </div>
       </div>
 
-      <div class="place-popup">
+      <div class="popup popup-place">
         <div class="popup__container">
           <h3 class="popup__title">Новое место</h3>
           <button class="popup__close-btn" type="button" name="close">
           </button>
-          <form class="place-input" name="form">
+          <form class="input input-place" name="form">
             <input class="input__text input__text_type_place" type="text" name="place-name" placeholder="Название">
             <input class="input__text input__text_type_link" type="text" name="place-link" placeholder="Ссылка на картинку">
             <button class="input__save-btn" type="submit" name="create-new-post">Создать</button>
@@ -73,12 +74,12 @@
         </div>
       </div>
 
-      <div class="image-popup">
-        <div class="image-popup__container">
+      <div class="popup popup-image">
+        <div class="popup-image__container">
           <button class="popup__close-btn" type="button" name="close">
           </button>
-          <img class="image-popup__image" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="фото места">
-          <h3 class="image-popup__title">Название</h3>
+          <img class="popup-image__img" src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg" alt="фото места">
+          <h3 class="popup-image__title">Название</h3>
         </div>
       </div>
 

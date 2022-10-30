@@ -1,4 +1,4 @@
-.profile__edit-button {
+.profile__edit-btn {
   background-color: transparent;
   box-sizing: border-box;
   width: 24px;
@@ -17,18 +17,15 @@
   
 
 @media (max-width: 767px){
-  .profile__edit-button {
+  .profile__edit-btn {
     width: 18px;
     height: 18px;
     background-size: 7.5px 7.5px;
-    /* margin изменил по PerfectPixel */
-    /* при переполнении съезжает к правой границе области */
-    /* margin: 0 0 0 11px; */
     margin: 0 auto;
     padding: 0;
   }
 }
 
-.profile__edit-button:hover {
+.profile__edit-btn:hover {
   opacity: .6;
 }

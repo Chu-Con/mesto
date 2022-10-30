@@ -31,108 +31,106 @@ const container = document.querySelector('.gallery');
 const postTemplate = document.querySelector('#post-template');
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ объявить переменные
-const buttonOpenPopup = document.querySelector('.profile__edit-button');
+const btnEditProfile = document.querySelector('.profile__edit-btn');
 const popup = document.querySelector('.popup');
-const buttonClosePopup = popup.querySelector('.popup__close-btn');
+const popupEditProfile = document.querySelector('.popup-edit');
+const btnCloseEditProfile = popup.querySelector('.popup__close-btn');
 
-const form = popup.querySelector('.input');
-const popupUserName = popup.querySelector('.input__text_type_name');
-const popupUserAbout = popup.querySelector('.input__text_type_occupation');
+const formEditPopup = popup.querySelector('.input-edit');
+const inputUserName = popupEditProfile.querySelector('.input__text_type_name');
+const inputUserAbout = popupEditProfile.querySelector('.input__text_type_occupation');
 
 const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__occupation');
 
 // НОВОЕ МЕСТО объявить переменные
-const btnAddPost= document.querySelector('.profile__add-button');
-const placePopup = document.querySelector('.place-popup');
-const btnExitAddPost = placePopup.querySelector('.popup__close-btn');
+const btnOpenAddPost= document.querySelector('.profile__add-btn');
+const placePopup = document.querySelector('.popup-place');
+const btnCloseAddPost = placePopup.querySelector('.popup__close-btn');
 
-const placeForm = placePopup.querySelector('.place-input');
+const placeForm = placePopup.querySelector('.input-place');
 const inputPlaceName = placePopup.querySelector('.input__text_type_place');
 const inputPlaceLink = placePopup.querySelector('.input__text_type_link');
 
-const placeName = document.querySelector('.post__name');
-const placeImage = document.querySelector('.post__photo');
-
-const imagePopup = document.querySelector('.image-popup');
+const imagePopup = document.querySelector('.popup-image');
 const btnExitImage = imagePopup.querySelector('.popup__close-btn');
 
 
 // НОВОЕ МЕСТО открыть попап
-const evtOpenPopup = function () {
+const openAddPost = function () {
   placePopup.classList.add('popup_opened');
 };
 
 // НОВОЕ МЕСТО закрыть попап
-const evtClosePopup = function () {
+const closeAddPost = function () {
   placePopup.classList.remove('popup_opened');
   inputPlaceName.value = '';
   inputPlaceLink.value = '';
 };
 
 // НОВОЕ МЕСТО слушатели событий - по клику на кнопку добавить или крестик
-btnAddPost.addEventListener('click', evtOpenPopup);
-btnExitAddPost.addEventListener('click', evtClosePopup);
+btnOpenAddPost.addEventListener('click', openAddPost);
+btnCloseAddPost.addEventListener('click', closeAddPost);
 
 // рендерим элементы массива
 const render = () => {
-  initialCards.forEach(card =>{
-    const postElement = createCardNode(card.name, card.link);
-    container.append(postElement);
+  initialCards.forEach((card) => {
+    const postPlaceCard = createCardNode(card.name, card.link);
+    container.append(postPlaceCard);
 
-    btnAddPost.addEventListener('click', evtOpenPopup);
-  })
+    // btnOpenAddPost.addEventListener('click', openAddPost);
+  });
 }
 
 const createCardNode = (name, link) => {
-  const postElement = postTemplate.content.cloneNode(true);
+  const postCard = postTemplate.content.cloneNode(true);
 
-  postElement.querySelector('.post__name').textContent = name;
-  postElement.querySelector('.post__photo').src = link;
-  postElement.querySelector('.post__photo').alt = name;
+  postCard.querySelector('.post__name').textContent = name;
+  postCard.querySelector('.post__photo').src = link;
+  postCard.querySelector('.post__photo').alt = name;
 
   // ставить лайк
-  const postLike = postElement.querySelector('.post__like-button');
+  const postLike = postCard.querySelector('.post__like-button');
   postLike.addEventListener('click', function (evt) {
-    evt.target.classList.toggle('post__like-button_active');
+    evt.target.classList.toggle('post__like-button_type_active');
   });
 
   // кнопка удалить карточку
-  const deleteBtn = postElement.querySelector('.post__delete-button');
-  deleteBtn.addEventListener('click', deleteCard);
+  const deleteBtn = postCard.querySelector('.post__delete-btn');
+  deleteBtn.addEventListener('click', deletePostCard);
 
   // ПОПАП С КАРТИНКОЙ открыть
-  const evtOpenImage = function (evt) {
+  const openPopupImage = function (evt) {
     imagePopup.classList.add('popup_opened');
 
-    const imgPopupImg = imagePopup.querySelector('.image-popup__image');
-    const imgPopupName = imagePopup.querySelector('.image-popup__title');
+    const imgPopupImg = imagePopup.querySelector('.popup-image__img');
+    const imgPopupTitle = imagePopup.querySelector('.popup-image__title');
 
-    const currentImg = evt.target.closest('.post__photo');
-    const currentName = evt.target.closest('.post');
-    imgPopupImg.src = currentImg.src;
-    imgPopupImg.alt = currentName.textContent;
-    imgPopupName.textContent = currentName.textContent;
+    const currentPostImg = evt.target.closest('.post__photo');
+    const currentPostName = evt.target.closest('.post');
+    imgPopupImg.src = currentPostImg.src;
+    imgPopupImg.alt = currentPostName.textContent;
+    imgPopupTitle.textContent = currentPostName.textContent;
   };
 
-  const placeImage = postElement.querySelector('.post__photo');
-  placeImage.addEventListener('click', evtOpenImage);
+  const placeImage = postCard.querySelector('.post__photo');
+  placeImage.addEventListener('click', openPopupImage);
 
   // ПОПАП С КАРТИНКОЙ закрыть
-  const evtCloseImage = function () {
+  const closePopupImage = function () {
     imagePopup.classList.remove('popup_opened');
   };
 
-  btnExitImage.addEventListener('click', evtCloseImage);
+  btnExitImage.addEventListener('click', closePopupImage);
 
 
-  return postElement;
+  return postCard;
 };
 
 // функция удалить карточку
-const deleteCard = (evt) => {
-  const currentCard = evt.target.closest('.post');
-  currentCard.remove();
+const deletePostCard = (evt) => {
+  const currentPostCard = evt.target.closest('.post');
+  currentPostCard.remove();
 };
 
 render();
@@ -145,36 +143,36 @@ function addNewPost (evt) {
   const card = createCardNode(inputPlaceName.value, inputPlaceLink.value);
   container.prepend(card);
 
-  evtClosePopup();
+  closeAddPost();
 };
 
 placeForm.addEventListener('submit', addNewPost);
 
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ открыть попап
-const eventOpenPopup = function () {
+const openEditProfile = function () {
   popup.classList.add('popup_opened');
   // вставить данные при открытии
-  popupUserName.value = userName.textContent;
-  popupUserAbout.value = userAbout.textContent;
+  inputUserName.value = userName.textContent;
+  inputUserAbout.value = userAbout.textContent;
 };
 
-// РЕДАКТИРОВАТЬ ПРОФИЛЬ закрыть попап 
-const eventClosePopup = function () {
+// РЕДАКТИРОВАТЬ ПРОФИЛЬ закрыть попап
+const closeEditProfile = function () {
   popup.classList.remove('popup_opened');
 };
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ слушатели событий - по клику на кнопку редактировать или крестик
-buttonOpenPopup.addEventListener('click', eventOpenPopup);
-buttonClosePopup.addEventListener('click', eventClosePopup);
+btnEditProfile.addEventListener('click', openEditProfile);
+btnCloseEditProfile.addEventListener('click', closeEditProfile);
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ изменить информацию о пользователе
 function editUserInfo (evt) {
   evt.preventDefault();
-  userName.textContent = popupUserName.value;
-  userAbout.textContent = popupUserAbout.value;
+  userName.textContent = inputUserName.value;
+  userAbout.textContent = inputUserAbout.value;
 
-  eventClosePopup();
+  closeEditProfile();
 };
 
-form.addEventListener('submit', editUserInfo);
+formEditPopup.addEventListener('submit', editUserInfo);

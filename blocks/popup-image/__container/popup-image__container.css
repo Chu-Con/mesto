@@ -1,0 +1,11 @@
+.popup-image__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* max-width: 882px;
+  width: max-content; */
+}
