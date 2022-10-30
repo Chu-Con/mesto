@@ -12,6 +12,8 @@
   border: none;
   box-shadow: none;
   cursor: pointer;
+  transition: opacity 0.15s ease;
+  /* transition здесь, а не в hover для плавного эффекта не только при наведении, но и когда убираем курсор с элемента */
 }
 
 

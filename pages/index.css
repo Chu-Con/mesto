@@ -46,11 +46,17 @@
   background: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  display: none;
+  /* display: none; */
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.4s linear;
 }
 
 .popup_opened {
-  display: flex;
+  /* display: flex; */
+  visibility: visible;
+  opacity: 1;
 }
 
 .place-input {
@@ -72,6 +78,8 @@
   position: absolute;
   top: 20px;
   right: 20px;
+  transition: opacity 0.15s ease;
+  /* transition здесь, а не в hover для плавного эффекта не только при наведении, но и когда убираем курсор с элемента */
 }
 
 .post__delete-button:hover {
@@ -94,11 +102,17 @@
   background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
-  display: none;
+  /* display: none; */
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.4s linear;
 }
 
 .popup_opened {
-  display: flex;
+  /* display: flex; */
+  visibility: visible;
+  opacity: 1;
 }
 
 .image-popup__container {
