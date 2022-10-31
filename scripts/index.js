@@ -32,11 +32,11 @@ const postTemplate = document.querySelector('#post-template');
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ объявить переменные
 const btnEditProfile = document.querySelector('.profile__edit-btn');
-const popup = document.querySelector('.popup');
+// const popup = document.querySelector('.popup');
 const popupEditProfile = document.querySelector('.popup-edit');
-const btnCloseEditProfile = popup.querySelector('.popup__close-btn');
+// const btnCloseEditProfile = document.querySelector('.popup__close-btn');
 
-const formEditPopup = popup.querySelector('.input-edit');
+const formEditPopup = document.querySelector('.input-edit');
 const inputUserName = popupEditProfile.querySelector('.input__text_type_name');
 const inputUserAbout = popupEditProfile.querySelector('.input__text_type_occupation');
 
@@ -44,41 +44,55 @@ const userName = document.querySelector('.profile__name');
 const userAbout = document.querySelector('.profile__occupation');
 
 // НОВОЕ МЕСТО объявить переменные
-const btnOpenAddPost= document.querySelector('.profile__add-btn');
+const btnOpenAddPost = document.querySelector('.profile__add-btn');
 const placePopup = document.querySelector('.popup-place');
-const btnCloseAddPost = placePopup.querySelector('.popup__close-btn');
+// const btnCloseAddPost = placePopup.querySelector('.popup__close-btn');
 
 const placeForm = placePopup.querySelector('.input-place');
 const inputPlaceName = placePopup.querySelector('.input__text_type_place');
 const inputPlaceLink = placePopup.querySelector('.input__text_type_link');
 
 const imagePopup = document.querySelector('.popup-image');
-const btnExitImage = imagePopup.querySelector('.popup__close-btn');
+const imgPopupImg = imagePopup.querySelector('.popup-image__img');
+const imgPopupTitle = imagePopup.querySelector('.popup-image__title');
+// const btnExitImage = imagePopup.querySelector('.popup__close-btn');
+const closeButtons = document.querySelectorAll('.popup__close-btn');
 
 
-// НОВОЕ МЕСТО открыть попап
-const openAddPost = function () {
-  placePopup.classList.add('popup_opened');
+// универсальная функция закрытия попапов
+function closePopup(popup) {
+  popup.classList.remove('popup_opened');
 };
 
-// НОВОЕ МЕСТО закрыть попап
-const closeAddPost = function () {
-  placePopup.classList.remove('popup_opened');
-  inputPlaceName.value = '';
-  inputPlaceLink.value = '';
+// универсальная функция открытия попапов
+function openPopup(popup) {
+  popup.classList.add('popup_opened');
 };
 
-// НОВОЕ МЕСТО слушатели событий - по клику на кнопку добавить или крестик
-btnOpenAddPost.addEventListener('click', openAddPost);
-btnCloseAddPost.addEventListener('click', closeAddPost);
+// универсально навесить обработчики крестиков
+closeButtons.forEach((button) => {
+  // находим 1 раз ближайший к крестику попап 
+  const popup = button.closest('.popup');
+  // устанавливаем обработчик закрытия на крестик
+  button.addEventListener('click', () => closePopup(popup));
+});
+
+// не работает слушатель событий
+// btnOpenAddPost.addEventListener('click', openPopup(placePopup));
+// closePopup(placePopup);
+
+const openAddPost = function () { 
+  openPopup(placePopup); 
+}; 
+
+btnOpenAddPost.addEventListener('click', openAddPost); 
+
 
 // рендерим элементы массива
 const render = () => {
   initialCards.forEach((card) => {
     const postPlaceCard = createCardNode(card.name, card.link);
     container.append(postPlaceCard);
-
-    // btnOpenAddPost.addEventListener('click', openAddPost);
   });
 }
 
@@ -101,10 +115,7 @@ const createCardNode = (name, link) => {
 
   // ПОПАП С КАРТИНКОЙ открыть
   const openPopupImage = function (evt) {
-    imagePopup.classList.add('popup_opened');
-
-    const imgPopupImg = imagePopup.querySelector('.popup-image__img');
-    const imgPopupTitle = imagePopup.querySelector('.popup-image__title');
+    openPopup(imagePopup);
 
     const currentPostImg = evt.target.closest('.post__photo');
     const currentPostName = evt.target.closest('.post');
@@ -115,14 +126,7 @@ const createCardNode = (name, link) => {
 
   const placeImage = postCard.querySelector('.post__photo');
   placeImage.addEventListener('click', openPopupImage);
-
-  // ПОПАП С КАРТИНКОЙ закрыть
-  const closePopupImage = function () {
-    imagePopup.classList.remove('popup_opened');
-  };
-
-  btnExitImage.addEventListener('click', closePopupImage);
-
+  // closePopup(imagePopup);
 
   return postCard;
 };
@@ -143,7 +147,8 @@ function addNewPost (evt) {
   const card = createCardNode(inputPlaceName.value, inputPlaceLink.value);
   container.prepend(card);
 
-  closeAddPost();
+  evt.target.reset();
+  closePopup(placePopup);
 };
 
 placeForm.addEventListener('submit', addNewPost);
@@ -151,20 +156,15 @@ placeForm.addEventListener('submit', addNewPost);
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ открыть попап
 const openEditProfile = function () {
-  popup.classList.add('popup_opened');
-  // вставить данные при открытии
+  openPopup(popupEditProfile);
   inputUserName.value = userName.textContent;
   inputUserAbout.value = userAbout.textContent;
 };
 
-// РЕДАКТИРОВАТЬ ПРОФИЛЬ закрыть попап
-const closeEditProfile = function () {
-  popup.classList.remove('popup_opened');
-};
-
-// РЕДАКТИРОВАТЬ ПРОФИЛЬ слушатели событий - по клику на кнопку редактировать или крестик
+// РЕДАКТИРОВАТЬ ПРОФИЛЬ слушатель событий
 btnEditProfile.addEventListener('click', openEditProfile);
-btnCloseEditProfile.addEventListener('click', closeEditProfile);
+closePopup(popupEditProfile);
+
 
 // РЕДАКТИРОВАТЬ ПРОФИЛЬ изменить информацию о пользователе
 function editUserInfo (evt) {
@@ -172,7 +172,7 @@ function editUserInfo (evt) {
   userName.textContent = inputUserName.value;
   userAbout.textContent = inputUserAbout.value;
 
-  closeEditProfile();
+  closePopup(popupEditProfile);
 };
 
 formEditPopup.addEventListener('submit', editUserInfo);
